@@ -12,6 +12,7 @@ $application = new Yaf_Application( APPLICATION_PATH . "/conf/application.ini");
 
 $application->bootstrap()->run();
 
+$xhprof_data = xhprof_disable();
 
 include_once '/home/wwwroot/effect/xhprof_lib/utils/xhprof_lib.php';
 include_once '/home/wwwroot/effect/xhprof_lib/utils/xhprof_runs.php';

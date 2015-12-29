@@ -61,7 +61,7 @@ class dbLib
      */
     private function _getDb($dbString)
     {
-		$dbConfig = new Yaf_Config_Ini('/home/wwwroot/myblog/conf/database.ini');
+		$dbConfig = new Yaf_Config_Ini('/home/wwwroot/myblog/conf/database.ini', 'staging');
     	if (! ($dbConfig instanceof  Yaf_Config_Ini)){
             exit("db system err");
         }

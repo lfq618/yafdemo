@@ -10,6 +10,11 @@ class TestController extends Yaf_Controller_Abstract {
 		
 		$row = dbLib::getInstance('picdb')->querySelectSql("select * from pic_upload_logs201505 where 1 limit 100");
 		var_dump($row);
+		
+		echo "<hr />";
+		$config = Yaf_Application::app()->getConfig();
+		var_dump($config);
+		
 		exit;
 	}
 }

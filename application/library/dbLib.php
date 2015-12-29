@@ -62,6 +62,7 @@ class dbLib
     private function _getDb($dbString)
     {
 		$dbConfig = new Yaf_Config_Ini('/home/wwwroot/myblog/conf/database.ini');
+		var_dump($dbConfig); EXIT;
     	if (! $dbconfig){
             exit('no dbString' . $dbString);
         }

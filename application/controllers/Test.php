@@ -15,6 +15,14 @@ class TestController extends Yaf_Controller_Abstract {
 		$config = Yaf_Application::app()->getConfig()->get('application');
 		var_dump($config);
 		
+		
+		exit;
+	}
+	
+	public function redisAction() {
+		
+		redisLib::getRedis('main')->increaseMcRow("lifuqiang", 10);
+		var_dump(redisLib::getRedis('main')->getMcRow("lifuqiang"));
 		exit;
 	}
 }

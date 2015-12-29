@@ -68,7 +68,7 @@ class dbLib
         echo $dbString;
         var_dump($dbConfig);
         
-//        	var_dump($dbConfig->database->get($dbString));
+       	var_dump($dbConfig->database->get($dbString));
        	exit;
         if (! $dbConfig->database->get($dbString))
         {

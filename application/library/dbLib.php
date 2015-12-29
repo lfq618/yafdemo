@@ -66,8 +66,9 @@ class dbLib
             exit("db system err");
         }
         echo $dbString;
+        echo "<hr />";
         var_dump($dbConfig);
-        
+        echo "<hr />";
        	var_dump($dbConfig->database->get($dbString));
        	exit;
         if (! $dbConfig->database->get($dbString))

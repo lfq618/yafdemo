@@ -1,7 +1,7 @@
 <?php
 /**
  * 测试
- * @author dell
+ * @author lifuqiang
  *
  */
 class TestController extends Yaf_Controller_Abstract {

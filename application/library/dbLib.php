@@ -61,7 +61,7 @@ class dbLib
      */
     private function _getDb($dbString)
     {
-		$dbConfig = new Yaf_Config_Ini('/home/wwwroot/myblog/conf/database.ini', 'production');
+		$dbConfig = new Yaf_Config_Ini(APPLICATION_PATH . '/conf/database.ini', 'production');
     	if (! ($dbConfig instanceof  Yaf_Config_Ini)){
             exit("db system err");
         }

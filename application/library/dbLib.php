@@ -24,9 +24,9 @@ class dbLib
      */
     static function getInstance($dbString)
     {
-        if (ENV != 'production') {
+       /*  if (ENV != 'production') {
             $dbString = "dbdev";
-        }
+        } */
         
         if (! isset(self::$dbPool)){
             $instance = new dbLib($dbString);

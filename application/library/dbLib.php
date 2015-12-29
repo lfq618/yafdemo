@@ -24,7 +24,7 @@ class dbLib
      */
     static function getInstance($dbString)
     {
-        if (ENV != DEF_ENV_OUTER) {
+        if (ENV != 'production') {
             $dbString = "dbdev";
         }
         

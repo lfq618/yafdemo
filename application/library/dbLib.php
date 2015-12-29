@@ -65,12 +65,7 @@ class dbLib
     	if (! ($dbConfig instanceof  Yaf_Config_Ini)){
             exit("db system err");
         }
-        echo $dbString;
-        echo "<hr />";
-        var_dump($dbConfig->database);
-        echo "<hr />";
-       	var_dump($dbConfig->database->get("picdb"));
-       	exit;
+       
         if (! $dbConfig->database->get($dbString))
         {
         	exit("no dbstring: " . $dbString);

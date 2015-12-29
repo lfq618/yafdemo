@@ -12,7 +12,7 @@ class TestController extends Yaf_Controller_Abstract {
 		var_dump($row);
 		
 		echo "<hr />";
-		$config = Yaf_Application::app()->getConfig();
+		$config = Yaf_Application::app()->getConfig()->get('application');
 		var_dump($config);
 		
 		exit;

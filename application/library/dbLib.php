@@ -69,7 +69,7 @@ class dbLib
         echo "<hr />";
         var_dump($dbConfig);
         echo "<hr />";
-       	var_dump($dbConfig->database->get($dbString));
+       	var_dump($dbConfig->database->get("picdb"));
        	exit;
         if (! $dbConfig->database->get($dbString))
         {

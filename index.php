@@ -24,5 +24,6 @@ include_once '/home/wwwroot/effect/xhprof_lib/utils/xhprof_runs.php';
 
 $xhprof_runs = new XHProfRuns_Default();
 $run_id = $xhprof_runs->save_run($xhprof_data, "xhprof_testing");
+echo "<hr />";
 echo "http://effect.demo//xhprof_html/index.php?run={$run_id}&source=xhprof_testing\n";
 ?>

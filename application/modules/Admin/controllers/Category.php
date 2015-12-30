@@ -22,7 +22,7 @@ class CategoryController extends Yaf_Controller_Abstract
 		if ($this->getRequest()->isPost())
 		{
 			//添加操作处理
-			var_dump($this->getRequest()->getParams());
+			var_dump($this->getRequest()->getParams('category'));
 			exit;
 		}
 		

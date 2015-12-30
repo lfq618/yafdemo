@@ -1,6 +1,6 @@
 <?php
 define('APPLICATION_PATH', dirname(__FILE__));
-define(YAF_ENVIRON, 'product');
+defined(YAF_ENVIRON) || define(YAF_ENVIRON, 'product');
 xhprof_enable(XHPROF_FLAGS_NO_BUILTINS | XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY, array(
        'ignored_functions' => array(
 	        'call_user_func',

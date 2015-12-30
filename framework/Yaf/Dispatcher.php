@@ -690,6 +690,8 @@ class Yaf_Dispatcher {
 
 	private function getController($appDir, $module, $controller) {
 		$controllerDir = '';
+		echo "appDir={$appDir}, module={$module}, controller={$controller}, default={$this->_default_module}";
+		exit;
 		if ($this->_default_module == $module)
 		{
 			$controllerDir = $appDir . DIRECTORY_SEPARATOR . Yaf_Loader::YAF_CONTROLLER_DIRECTORY_NAME;

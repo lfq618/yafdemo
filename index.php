@@ -8,6 +8,11 @@ xhprof_enable(XHPROF_FLAGS_NO_BUILTINS | XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY,
         )
 ));
 
+if (! extension_loaded("yaf"))
+{
+	include APPLICATION_PATH . '/framework/loader.php';
+}
+
 $application = new Yaf_Application( APPLICATION_PATH . "/conf/application.ini");
 
 $application->bootstrap()->run();

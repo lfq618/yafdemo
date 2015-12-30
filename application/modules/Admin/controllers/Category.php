@@ -24,7 +24,7 @@ class CategoryController extends Yaf_Controller_Abstract
 			//添加操作处理
 			var_dump($this->getRequest());
 			echo "<hr />";
-			var_dump($this->getRequest()->getPost('icon'));
+			var_dump($this->getRequest()->getPost());
 			exit;
 		}
 		

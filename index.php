@@ -17,10 +17,14 @@ $application = new Yaf_Application( APPLICATION_PATH . "/conf/application.ini");
 
 $application->bootstrap()->run();
 
+var_dump($application->getModules());
+
 $xhprof_data = xhprof_disable();
 
 include_once '/home/wwwroot/effect/xhprof_lib/utils/xhprof_lib.php';
 include_once '/home/wwwroot/effect/xhprof_lib/utils/xhprof_runs.php';
+
+
 
 $xhprof_runs = new XHProfRuns_Default();
 $run_id = $xhprof_runs->save_run($xhprof_data, "xhprof_testing");

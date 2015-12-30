@@ -1,5 +1,5 @@
 <?php
-class Admin_CategoryController extends Yaf_Controller_Abstract
+class CategoryController extends Yaf_Controller_Abstract
 {
 	
 	public function indexAction()

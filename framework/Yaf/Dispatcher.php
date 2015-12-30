@@ -144,7 +144,7 @@ class Yaf_Dispatcher {
 		{
 			$this->setRequest($request);
 		}
-		var_dump($this->getRequest()); exit;
+		var_dump($this->getRequest());
 		if (!($request instanceof Yaf_Request_Abstract))
 		{
 			throw new Yaf_Exception_TypeError('Expect a Yaf_Request_Abstract instance');
@@ -161,6 +161,8 @@ class Yaf_Dispatcher {
 		 * Initialize router
 		 */
 		$router = $this->getRouter();
+		var_dump($request);
+		
 		if (!$request->isRouted())
 		{
 			/**

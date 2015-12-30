@@ -737,6 +737,8 @@ class Yaf_Dispatcher {
 
 	private function _fixDefault(Yaf_Request_Abstract $request) {
 		$module = $request->getModuleName();
+		echo $module;  
+		echo "<hr />";
 		if (empty($module) || !is_string($module))
 		{
 			$request->setModuleName($this->_default_module);

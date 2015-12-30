@@ -12,7 +12,7 @@ class CategoryController extends Yaf_Controller_Abstract
 		$categoryObj = new CategoryModel();
 		$list = $categoryObj->getCategoryList();
 		var_dump($list);
-		exit;
+// 		exit;
 	}
 	
 	public function addAction()

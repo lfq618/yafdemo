@@ -136,6 +136,7 @@ class Yaf_Dispatcher {
 		/**
 		 * Instantiate default request object (HTTP version) if none provided
 		 */
+		var_dump($request);  exit;
 		if ($request == null)
 		{
 			$request = $this->getRequest();

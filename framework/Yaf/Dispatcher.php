@@ -220,6 +220,11 @@ class Yaf_Dispatcher {
 				/**
 				 * Dispatch request
 				 */
+				var_dump($request);
+				echo "<hr />";
+				var_dump($response);
+				echo "<hr />";
+				var_dump($view);
 				$this->handle($request, $response, $view);
 				$this->_fixDefault($request);
 				/**

@@ -136,7 +136,6 @@ class Yaf_Dispatcher {
 		/**
 		 * Instantiate default request object (HTTP version) if none provided
 		 */
-		var_dump($request);  exit;
 		if ($request == null)
 		{
 			$request = $this->getRequest();
@@ -145,6 +144,7 @@ class Yaf_Dispatcher {
 		{
 			$this->setRequest($request);
 		}
+		var_dump($this->getRequest()); exit;
 		if (!($request instanceof Yaf_Request_Abstract))
 		{
 			throw new Yaf_Exception_TypeError('Expect a Yaf_Request_Abstract instance');

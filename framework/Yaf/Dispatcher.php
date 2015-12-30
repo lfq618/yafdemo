@@ -144,8 +144,6 @@ class Yaf_Dispatcher {
 		{
 			$this->setRequest($request);
 		}
-		var_dump($this->getRequest());
-		echo "<hr />";
 		if (!($request instanceof Yaf_Request_Abstract))
 		{
 			throw new Yaf_Exception_TypeError('Expect a Yaf_Request_Abstract instance');
@@ -162,9 +160,6 @@ class Yaf_Dispatcher {
 		 * Initialize router
 		 */
 		$router = $this->getRouter();
-		var_dump($request);
-		echo "<hr />";
-		
 		if (!$request->isRouted())
 		{
 			/**
@@ -225,11 +220,6 @@ class Yaf_Dispatcher {
 				/**
 				 * Dispatch request
 				 */
-				var_dump($request);
-				echo "<hr />";
-				var_dump($response);
-				echo "<hr />";
-				var_dump($view);
 				$this->handle($request, $response, $view);
 				$this->_fixDefault($request);
 				/**
@@ -700,8 +690,6 @@ class Yaf_Dispatcher {
 
 	private function getController($appDir, $module, $controller) {
 		$controllerDir = '';
-		echo "appDir={$appDir}, module={$module}, controller={$controller}, default={$this->_default_module}";
-		exit;
 		if ($this->_default_module == $module)
 		{
 			$controllerDir = $appDir . DIRECTORY_SEPARATOR . Yaf_Loader::YAF_CONTROLLER_DIRECTORY_NAME;
@@ -737,8 +725,6 @@ class Yaf_Dispatcher {
 
 	private function _fixDefault(Yaf_Request_Abstract $request) {
 		$module = $request->getModuleName();
-		echo $module;  
-		echo "<hr />";
 		if (empty($module) || !is_string($module))
 		{
 			$request->setModuleName($this->_default_module);
